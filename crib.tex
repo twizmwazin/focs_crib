@@ -1,5 +1,5 @@
-\documentclass[a4paper]{article}
-\usepackage{amsmath, amsthm, amssymb, multicol,mathtools}
+\documentclass[letter]{article}
+\usepackage{amsmath, amsthm, amssymb, multicol}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{tikz}
 
@@ -42,44 +42,55 @@
 	of one or more previous terms.
 	\section{Combinatorics}
 	\subsection{Permutations and Combinations}
-	\textbf{r-permutation}: a permutation of a set using r number of
-	elements.\\
-	\textbf{Number of permutations}= $P(n,r)=\dfrac{n!}{(n-r)!}$\\r-permutation
-	of set with n distinct elements\\
-	\textbf{r-combination}: a subset of the set with r elements\\
-	number of r combinations of a set with n elements is\\
-	C (n, r) or
-	$\binom{n}{r}=\dfrac{n!}{(n-r)!r!}$ = number of r permutations
-	aka binomial coefficient\\
-	\textbf{Binomial theorem}: x and y are variable n is nonneg int\\
-	${(x+y)}^{n}=\sum{n}{j=0}\binom{n}{j}x^{n-j}y^{j}$\\
-	\textbf{Pascal's Identity}: if n and k are ints with $n \geq k \geq 0$ then
-	\\
-	$\binom{n+1}{k}=\binom{n}{k-1}+\binom{n}{k}$\\
-	\textbf{Permutation with reputation}: string of length r with n choices
-	$n^r$\\
-	if no repetition allowed $P(n,r)=\dfrac{n!}{(n-r)!}$\\
-	\textbf{Combinations with repetition}: the number of r combinations from a
-	set with n elements when repetition of elements is allowed is\\
-	$C(n+r-1,r)=C(N+r-1,n-1)=\binom{n+r-1}{r}$\\
-	\textbf{Stars and Bars}:Choose 6(r) cookies from 4(n) kinds of cookies how
-	many ways to place 3 bars\\
-	\textbf{Number of solutions}:$x_1+x_2+x_3=11$ where xs are non-negative
-	ints\\
-	\textbf{Permutations with indistinguishable Objects}: reorder SUCCESS\\
-	3 S's $\binom{7}{3} 2 c's \binom{4}{2} \binom{remaining}{amount of current object}=\dfrac{n!}{n_1!n_2!\cdots n_k!}$\\
-	$\binom{3-1+11}{3-1}$ (stars and bars)\\
-	$\binom{r+n-1}{n-1}=\binom{9}{3}$\\
-	\textbf{Division rule}: if there are n ways to do something but for any way
-	2 there are (d-1) ways that are identical then there are n/d ways to do it
-	\\
-	\textbf{Ramsey Party Problem\\
-	Ramsey Numbers}: $R (m,n)$ for m and n positive ints greater than 1 the
-	minimum number of people at a party such that there are either m mutual
-	friends of n mutual enemies.
+	\textbf{r-permutation}: A permutation of a set using r number of
+	elements. \\
+	\textbf{Number of permutations}: A r-permutation of set with $n$ distinct
+	elements.
+	$$P(n, r) = \dfrac{n!}{(n - r)!}$$
+	\textbf{r-combination}: A subset of the set with $r$ elements. \\
+	The number of r-combinations of a set with $n$ elements is the number of
+	r-permutations, also known as the binomial coefficient.
+	$$C(n, r) = \binom{n}{r} = \dfrac{n!}{(n - r)!r!}$$
+	\textbf{Binomial theorem}: $x$ and $y$ are variables and $n$ is a
+	non-negative integer. \\
+	$${(x + y)}^{n} = \sum{n}{j = 0}\binom{n}{j}x^{n - j}y^{j}$$
+	\textbf{Pascal's Identity}: If $n$ and $k$ are integers where
+	$n \geq k \geq 0$, then
+	$$\binom{n + 1}{k}=\binom{n}{k - 1}+\binom{n}{k}$$
+	\textbf{Permutation with reputation}: A string of length $r$ with $n$
+	choices $n^r$ If no repetition allowed, then
+	$$P(n, r) = \dfrac{n!}{(n - r)!}$$
+	\textbf{Combinations with repetition}: The number of r-combinations from a
+	set with $n$ elements when repetition of elements is allowed is
+	$$C(n + r - 1, r)=C(N + r - 1, n - 1) = \binom{n + r - 1}{r}$$
+	\textit{Stars and Bars}: When choosing $6(r)$ cookies from $4(n)$ kinds of
+	cookies how many ways to place 3 bars? \\
+	\textit{Number of solutions}: How many solutions are there to
+	$x_1 + x_2 + x_3 = 11$, where all variables are non-negative integers? \\
+	$$$$
+	$$\binom{r + n - 1}{n - 1} = \binom{3 - 1 + 11}{3 - 1} = \binom{9}{3}$$
+	\textbf{Permutations with indistinguishable Objects}: \\
+	\textit{Example}: How many ways can ``SUCCESS'' be re-ordered? \\
+	Considering there are 3 S, 2 C, 1 U and 1 E, we can use the template equation
+	$$\frac{n!}{n_1!n_2! \ldots n_k!}$$
+	The divisor is the number of distinguishable characters. The solution equation
+	is:
+	$$\frac{7!}{3!2!1!1!}$$
+	\textbf{Division rule}: Suppose a task can be carried out $n$ ways, but for
+	any way $w$, there are $(d - 1)$ ways that are considered identical to $w$.
+	Then, there are $n/d$ ways to do the task. \\
+	\textit{How many ways are there to seat four people at a table?} \\
+	Two seatings are considered the same when each person has the same neighbors.
+	$$\frac{4 \times 3 \times 2 \times 1}{4} = \frac{4!}{6} = 6$$
+	\textbf{Ramsey Party Problem}
+	\textbf{Ramsey Numbers}: $R(m, n)$ for $m$ and $n$ positive integers greater
+	than 1, the minimum number of people at a party such that there are either $m$
+	mutual friends of $n$ mutual enemies.
 	\subsection{Pigeonhole Principle}
-	3 pigeons 2 holes = at least 2 pigeons in one hole\\
-	$\lceil\dfrac{N}{k}\rceil$\\N pigeons and k holes
+	If $k$ is a positive integer and $k + 1$ objects are placed into $k$ boxes,
+	then at least one box contains two or more objects. $N$ pigeons placed into
+	$k$ holes would be
+	$$\lceil\dfrac{N}{k}\rceil$$
 
 	\section{Discrete Probability}
 	\subsection{Laplace's Theory or Probability}
@@ -172,7 +183,7 @@
 	\end{itemize}
 	In each step, a Turing machine \textbf{reads a symbol, writes a symbol, and
 	moves left or right.} A turing machine cannot move left past the start of a
-  tape, rather, it stays in place. \\
+	tape, rather, it stays in place. \\
 	A Turing machine has an accept stte and and a reject state. If it reaches one
 	of these states, it outputs accept or rejects and stops reading input. An
 	infinate loop means ``reject.'' \\
