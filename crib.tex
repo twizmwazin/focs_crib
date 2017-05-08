@@ -94,23 +94,51 @@
 
 	\section{Discrete Probability}
 	\subsection{Laplace's Theory or Probability}
-	\begin{itemize}
-		\item Given $S$ is a finite set of equally likely outcomes, and $E$ is an event of $S: p(E) = |E|/|S|$
-		\item The probability of not $p(E) = 1 - p(E)$. This is the complement of $p(E)$.
-		\item Given $E_1$ and $E_2$ are events in S: $p(E_1 U E_2) = p(E_1) + p(E_2) - p(E_1 \cap E_2)$
+	Given $S$ is a finite set of equally likely outcomes, and $E$ is an event of
+	$S$:
+	$$\frac{|E|}{|S|} = \frac{\text{Size of } E}{\text{Size of } S}$$
+	The probability of $\neg p(E) = 1 - p(E)$. $\neg p(E)$ is the complement of
+	$P(E)$. \\
+	Given $E_1$ and $E_2$ are events in $S$:
+	$$p(E_! \cup E_2) = p(E_1) + p(E_2) - p(E_1 \cap E_2)$$
 	\subsection{Probability Distributions}
+	Let $S$ be a finite set of outcomes. We can assign a $p(s)$ to each $s$ in $S$
+	on two conditions:
 	\begin{itemize}
-		\item Let $S$ be a finite set of outcomes. We can assign a $p(s)$ to each $s$ in $S$ on 2 conditions:
-		\begin{enumerate}
-			\item $0 \leq p(s) \leq 1$ for each $s$
-			\item $\sum_{s \in S}p(s) = 1$
-		\end{enumerate}
-		\item $p(s)$ is a function called the \textit{probability distribution}
+		\item $0 \leq p(s) \leq 1$ for each $s$
+		\item $\sum{p(s)} = 1$
 	\end{itemize}
+	$p$ is a function called the ``\textbf{probability distribution}.'' \\
+	If each element in $S$ is equally likely, then the probability of each element
+	is $\frac{1}{|S|}$. \\
+	The probability of event $E$ is the sum of the probabilities of the outcomes in
+	$E$.
 	\subsection{Conditional Probability}
+	$p(E|F)$ is ``the probability of $E$, given $F$ is true. \\
+	Given events $E$ and $F$ where $p(E) \neq 0$ and $p(F) \neq 0$:
+	$$p(F|E) = \frac{p(E|F)p(F)}{p(E|F)p(F) + p(E|\neg F)p(\neg F)}$$
 	\subsection{Bayes' Theorem}
+	Given $E$ and $F$ are events and $p(F) \neq 0$:
+	$$p(E|F) = \frac{p(F|E)p(E)}{p(E)}$$
 	\subsection{Independence}
+	Events $E$ and $F$ are \textbf{independent} if and only if
+	$$p(E \cap F) = p(E)p(F)$$
 	\subsection{Random Variables and Expectation}
+	A \textbf{random variable} is a function from the sample space of all real
+	numbers that assigns a real number to each possible outcome.
+	\textit{Example}: Flip a coin $3$ times. $X(t)$ can equal the number of heads
+	in outcome $t$. \\
+	The \textbf{probability distribution function} is the probability of the
+	random variable $X$ to take a value $r$. \\
+	The \textbf{Expected value (expectation)} of a random variable $X$ on sample
+	$S$ is
+	$$E(X) = \sum p(t)X(t) = \sum p(X = r)r$$
+	The \textbf{linearity of expectations} states that given $X_i$, where
+	$i \leq 1 \leq n$, where all $X$ are random values in the sample space $S$,
+	and $a, b \in \mathbb{R}$, then
+	$i = 1, 2, \ldots, n$, then
+	$$\sum_{i = 1}^n X_n = \sum_{x = 1}^n E(X_i)$$
+	$$E(aX + b) = aE(x) + b$$
 
 	\section{Models of Computation}
 	\subsection{Regular Languages}
