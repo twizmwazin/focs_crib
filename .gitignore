@@ -1,3 +1,9 @@
 *.aux
 *.log
 *.pdf
+
+crib\.fdb_latexmk
+
+crib\.fls
+
+crib\.synctex\.gz
