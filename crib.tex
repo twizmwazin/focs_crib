@@ -44,17 +44,30 @@
 	\subsection{Languages}
 
 	\section{Decision Problems}
+	\begin{itemize}
+		\item \textbf{Decision problems} are problems with a YES or NO answer.
+		\item A language is \textbf{Turing-decidable} if some Turing Machine decides
+					it.
+		\item The Turing Machine always halts.
+		\item Not all languages are recognizeable by a turing machine.
+		\item Theorem: The membersip problem is undecidable. There is no Turing
+					Machine that can decide whether $M$ accepts $w$ for all $M$ and $w$.
+		\item Theorem: The halting probelm is undecidable. There is no Turing
+					machine that can determine whether $M$ halts on input for $w$ for all
+					$M$ and $w$ (Proved in Turing's 1936 paper).
+	\end{itemize}
 
 	\section{P and NP}
 	$$P \subset NP$$
 	\begin{itemize}
-		\item Every	language	that	can	be	decided	by	a	deterministic	Turing
-		      Machine	in polynomial	time	can	be	decided	by	a	nondeterministic
-		      Turing Machine	in polynomial	time.
-		\item Every	deterministic	Turing Machine	is	a	nondeterministic	TM.
+		\item Every language that can be decided by a deterministic Turing
+					Machine in polynomial time can be decided by a nondeterministic
+					Turing Machine in polynomial time.
+		\item Every deterministic Turing Machine is a nondeterministic Turing
+					Machine.
 		\item Is $P = NP$? We don't know.
 		\item Does the satisfiability problem have a polynomial time deterministic
-		      algorithm? We don't know.
+					algorithm? We don't know.
 		\item Cook's Theorem: The satisfiability problem is $NP$-complete.
 	\end{itemize}
 
