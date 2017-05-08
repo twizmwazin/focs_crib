@@ -1,5 +1,5 @@
 \documentclass[a4paper]{article}
-\usepackage{amsmath, amsthm, amssymb, multicol}
+\usepackage{amsmath, amsthm, amssymb, multicol,mathtools}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{tikz}
 
@@ -22,9 +22,46 @@
 
 	\section{Sequences and Series}
 
-	\section{Combinatronics}
+	\section{Combinatorics}
 	\subsection{Permutations and Combinations}
-	\subsection{Pigeonhile Principle}
+	\textbf{r-permutation}: a permutation of a set using r number of
+	elements.\\
+	\textbf{Number of permutations}= $P(n,r)=\dfrac{n!}{(n-r)!}$\\r-permutation
+	of set with n distinct elements\\
+	\textbf{r-combination}: a subset of the set with r elements\\
+	number of r combinations of a set with n elements is\\
+	C (n, r) or
+	$\binom{n}{r}=\dfrac{n!}{(n-r)!r!}$ = number of r permutations
+	aka binomial coefficient\\
+	\textbf{Binomial theorem}: x and y are variable n is nonneg int\\
+	${(x+y)}^{n}=\sum{n}{j=0}\binom{n}{j}x^{n-j}y^{j}$\\
+	\textbf{Pascal's Identity}: if n and k are ints with $n \geq k \geq 0$ then
+	\\
+	$\binom{n+1}{k}=\binom{n}{k-1}+\binom{n}{k}$\\
+	\textbf{Permutation with reputation}: string of length r with n choices
+	$n^r$\\
+	if no repetition allowed $P(n,r)=\dfrac{n!}{(n-r)!}$\\
+	\textbf{Combinations with repetition}: the number of r combinations from a
+	set with n elements when repetition of elements is allowed is\\
+	$C(n+r-1,r)=C(N+r-1,n-1)=\binom{n+r-1}{r}$\\
+	\textbf{Stars and Bars}:Choose 6(r) cookies from 4(n) kinds of cookies how
+	many ways to place 3 bars\\
+	\textbf{Number of solutions}:$x_1+x_2+x_3=11$ where xs are non-negative
+	ints\\
+	\textbf{Permutations with indistinguishable Objects}: reorder SUCCESS\\
+	3 S's $\binom{7}{3} 2 c's \binom{4}{2} \binom{remaining}{amount of current object}=\dfrac{n!}{n_1!n_2!\cdots n_k!}$\\
+	$\binom{3-1+11}{3-1}$ (stars and bars)\\
+	$\binom{r+n-1}{n-1}=\binom{9}{3}$\\
+	\textbf{Division rule}: if there are n ways to do something but for any way
+	2 there are (d-1) ways that are identical then there are n/d ways to do it
+	\\
+	\textbf{Ramsey Party Problem\\
+	Ramsey Numbers}: $R (m,n)$ for m and n positive ints greater than 1 the
+	minimum number of people at a party such that there are either m mutual
+	friends of n mutual enemies.
+	\subsection{Pigeonhole Principle}
+	3 pigeons 2 holes = at least 2 pigeons in one hole\\
+	$\lceil\dfrac{N}{k}\rceil$\\N pigeons and k holes
 
 	\section{Discrete Probability}
 	\subsection{Laplace's Theory or Probability}
