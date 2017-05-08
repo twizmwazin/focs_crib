@@ -1,6 +1,7 @@
 \documentclass[a4paper]{article}
 \usepackage{amsmath, amsthm, amssymb, multicol}
 \usepackage[margin=0.5in]{geometry}
+\usepackage{tikz}
 
 \pagenumbering{gobble}
 
@@ -35,9 +36,79 @@
 
 	\section{Models of Computation}
 	\subsection{Regular Languages}
+	\begin{itemize}
+		\item A \textbf{languages} is any subset of $\Sigma^*$
+		\item Example: $\Sigma = {a, b}$ \\
+					${\lambda}$ \\
+					${a, aa, aab}$ \\
+					${\lambda, a, aa, aaa, aaaa, aaaaa}$ \\
+		\item We say a Finite Automata accepts a string if, when it processes that
+					string, it ends in an accept state.
+	\end{itemize}
 	\subsection{Finite Automata and Regular Expressions}
-	\subsection{Contex-Free Languages and Grammarss}
+	Example of a finite automata:
+	\begin{center}
+		\begin{tikzpicture}[scale=0.2]
+			\tikzstyle{every node}+=[inner sep=0pt]
+			\draw [black] (15.1,-29.5) circle (3);
+			\draw (15.1,-29.5) node {$q_0$};
+			\draw [black] (24.6,-29.2) circle (3);
+			\draw (24.6,-29.2) node {$q_1$};
+			\draw [black] (24.6,-29.2) circle (2.4);
+			\draw [black] (35.3,-29.2) circle (3);
+			\draw (35.3,-29.2) node {$q_2$};
+			\draw [black] (13.777,-26.82) arc (234:-54:2.25);
+			\draw (15.1,-22.25) node [above] {$a$};
+			\fill [black] (16.42,-26.82) -- (17.3,-26.47) -- (16.49,-25.88);
+			\draw [black] (18.1,-29.41) -- (21.6,-29.29);
+			\fill [black] (21.6,-29.29) -- (20.79,-28.82) -- (20.82,-29.82);
+			\draw (19.87,-29.88) node [below] {$b$};
+			\draw [black] (27.6,-29.2) -- (32.3,-29.2);
+			\fill [black] (32.3,-29.2) -- (31.5,-28.7) -- (31.5,-29.7);
+			\draw (29.95,-29.7) node [below] {$a,\mbox{ }b$};
+			\draw [black] (33.977,-26.52) arc (234:-54:2.25);
+			\draw (35.3,-21.95) node [above] {$a,\mbox{ }b$};
+			\fill [black] (36.62,-26.52) -- (37.5,-26.17) -- (36.69,-25.58);
+			\draw [black] (7.3,-29.5) -- (12.1,-29.5);
+			\fill [black] (12.1,-29.5) -- (11.3,-29) -- (11.3,-30);
+		\end{tikzpicture}
+	\end{center}
+	A machine only accepts \textbf{one} language. If it accept no strings, it
+	recognizes the langauge $\o$. \\
+	A palindrome is a string whose reversal is identical to the string.
+	\subsection{Contex-Free Languages and Grammars}
+	\begin{itemize}
+		\item A \textbf{regular expression} is a way of describing a regular
+					language.
+		\item A grammar gives the rules for expressing a language.
+		\item A \textbf{context-free} language can be described by a
+					\textbf{context-free grammar}.
+		\item Theorem: A language is context-free if and only if some
+					(nondeterministic) pushdown automaton recognizes it.
+		\item A CFG is \textbf{ambiguos} if some string $w \in L(G)$ has at least
+					two different leftmost derivations.
+		\item Some context-free languages habe only ambiguous grammars.
+	\end{itemize}
+	Example: Designe a CFG for $L(G) = \{ww^R : w \in \{a, b\}^*\}$ \\
+	\begin{align*}
+		S & \rightarrow aSa     \\
+		S & \rightarrow bSb     \\
+		S & \rightarrow \lambda \\
+		S & \rightarrow a|b
+	\end{align*}
 	\subsection{Turning Machines}
+	A turing machine:
+	\begin{itemize}
+		\item Reads input from tape, one character at a time.
+		\item Changes state based on input.
+		\item Outputs ``accept'' or ``reject'' when input ends.
+	\end{itemize}
+	In each step, a Turing machine \textbf{reads a symbol, writes a symbol, and
+	moves left or right.} A turing machine cannot move left past the start of a
+  tape, rather, it stays in place. \\
+	A Turing machine has an accept stte and and a reject state. If it reaches one
+	of these states, it outputs accept or rejects and stops reading input. An
+	infinate loop means ``reject.'' \\
 
 	\section{Limitations of Computational Models}
 	\begin{itemize}
