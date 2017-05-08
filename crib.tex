@@ -40,8 +40,41 @@
 	\subsection{Turning Machines}
 
 	\section{Limitations of Computational Models}
+	\begin{itemize}
+		\item The language consisting of all Turing Machines encodings is an
+					infinate set.
+		\item Not all languages are recognizeable by a Turing Machine.
+		\item Infinte sets come in different sizes.
+	\end{itemize}
 	\subsection{Countable vs. Uncountable Sets}
+	\begin{itemize}
+		\item An infinite set $S$ is \textbf{countable} if and only if ther exists a
+					bijective function $f: S \rightarrow Z^+$. $f$ maps each element of
+					$S$ to exactly one element of $Z^+$ and every element of $Z^+$ is
+					mapped by some element of $S$, under $f$.
+		\item All infinite countable sets are the same size, the same size as $Z^+$.
+		\item All finite sets are countable.
+		\item \textbf{All subsets of countable sets are countable.}
+	\end{itemize}
+	\subsection{Enumerators}
+	\begin{itemize}
+		\item An enumerator for a langage $S$ is a Turing Machine that generates
+					all the strings in $S$ one by one. Each string is generated in finite
+					time.
+		\item \textbf{A set is countable if we can find an enumeration procedure for
+					the set.}
+		\item Theorem: The set of all Turing Machines is countable.
+	\end{itemize}
 	\subsection{Languages}
+	\begin{itemize}
+		\item There are some languages not accepted by Turing Machines.
+		\item These languages cannout be described by algorithms.
+		\item A languages is called \textbf{Turing recognizable} if some Turing
+					Machine recognizes it (aka accepts it).
+		\item A language is called \textbf{Turing decidable} if some Turing machine
+					decides it.
+		\item Not all languages are recognizeable by a turing machine.
+	\end{itemize}
 
 	\section{Decision Problems}
 	\begin{itemize}
@@ -49,7 +82,6 @@
 		\item A language is \textbf{Turing-decidable} if some Turing Machine decides
 					it.
 		\item The Turing Machine always halts.
-		\item Not all languages are recognizeable by a turing machine.
 		\item Theorem: The membersip problem is undecidable. There is no Turing
 					Machine that can decide whether $M$ accepts $w$ for all $M$ and $w$.
 		\item Theorem: The halting probelm is undecidable. There is no Turing
