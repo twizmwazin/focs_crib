@@ -125,7 +125,7 @@
   $$ab(\mod m) = ((a\mod m)(b\mod m))\mod m$$
 
   \subsection{Properties}
-  \begin{itemize}
+  \begin{itemize}[noitemsep]
 	  \item $\mathbb{Z}_m = {0, 1, ..., m- 1}$ with $ m\in \mathbb{Z}_{>0}$
 	  \item $a+_mb = (a + b)\mod m$
 	  \item $a*_mb = (ab)\mod m$
@@ -154,9 +154,27 @@
   \subsection{Integer Representations and Algorithms}
   Given $b \in \mathbb{Z}$, $b > 1$, if $n \in \mathbb{Z}_{>0}$: $$n = a_kb^k +
   a_{k-1}b^{k-1} + \ldots + a_1b + a_0$$
-  \subsection{Conversions Among Binary, Octal, and Hexidecimal}
-  \subsection{Modular Exponentiation}
+  Where $k \in \mathbb{Z}_{\geq 0}$ and $$ a_0, a_1, ..., a_k \in \mathbb{Z}_{\geq 0}, a_k \neq 0$$, 
+  $$0 \leq a_0, a_1, ..., a_k < b$$
+  $b$ is the base.
 
+  \subsection{Modular Exponentiation}
+  Given $b \in \mathbb{Z}, m, n \in \mathbb{Z}_{>0}$, where $n$ is represented as a binary number
+  $$ n = a_0 + a_1 2 + a_2 2^2 + ... + a_{k-1}2^{k-1}$$
+
+  \subsection{Primes}
+  \textbf{Fundamental Theorem of Arithmetic:}\\
+  Every integer greater than 1 can be written uniquely as a prime or as product of primes.\\
+  \textbf{Theorem 2:}\\
+  If $n$ is composite, then $n$ has a prime divisor less than or equal to $\sqrt n$\\
+  \textbf{Mersenne Primes:}\\ A prime $p_m$ that satisfies $p_m = 2^R - 1$ (R is whatever)\\
+
+  \subsection{GCDs and LCMs}
+  Two integers are \textbf{Relatively Prime} if their GCD is 1\\
+  Three or more relatively prime integers are \textbf{Pairwise Relatively Prime}\\
+  \textbf{Bezout's Theorem:}\\ Given positive integers $a$ and $b$, $\exists s,t\in \mathbb{Z}$
+  such that $gcd(a,b) = sa + tb$
+  
   \section{Set Theory}
   $
   \mathbb{N} = \{0, 1, 2 \ldots \} = \mathbb{Z}_0 \\
