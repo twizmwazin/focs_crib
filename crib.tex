@@ -11,7 +11,6 @@
 
 	\section{Informal Proofs}
 	Informal proofs involve proving stuff with a combination of math and English.\\\\
-
 	\textbf{Proposition}: A less important theorem\\
 	\textbf{Lemma}: A proposition used to prove a theorem\\
 	\textbf{Corollary}: A theorem that follows directly from another theorem\\
@@ -26,6 +25,31 @@
 	\textbf{Counterexamples:} Sometimes the easiest way to prove something is wrong is to find an example\\
 
 	\section{Proofs by Induction}
+	Proves the truth of $P(n)$ for all $n \in \mathbb{Z}$.\\
+	Major Steps:
+	\begin{enumerate}
+		\item \textbf{Basis Step:} Prove $P(b)$ is true, where b is the base value (usually the smallest one possible)
+		\item \textbf{Inductive Hypothesis:} Assume that $P(k)$ is true
+		\item \textbf{Inductive Step:} Prove that if $P(n)$ is true, then $P(n + 1)$ is true
+	\end{enumerate}
+	\subsection{Strong Induction}
+	Prove that $P(n)$ is true for \textbf{all} $n \in \mathbb{Z}$. Induction and Strong Induction are
+	equivalent, meaning is one is true, so is the other.\\
+	Major Steps:
+	\begin{enumerate}
+		\item \textbf{Basis Step:} Prove $P(b)$ is true, where b is the base value (usually the smallest one possible)
+		\item \textbf{Inductive Hypothesis:} Assume that $P(y)$ is true for all $b \leq y \leq k$
+		\item \textbf{Inductive Step:} Prove that if $P(y)$ is true, then $P(k + 1)$ is true
+	\end{enumerate}
+
+	\subsection{Structural Induction}
+	Used to prove results about recursively defined sets and structures.\\
+	Major Steps:
+	\begin{enumerate}
+		\item \textbf{Basis Step:} Prove $P(b)$ is true for the basis part of the recursive definition
+		\item \textbf{Inductive Hypothesis:} Assume that the recursive part of the definition is true for the basis step
+		\item \textbf{Inductive Step:} Prove if the recursive part holds for the basis step, then it holds for everything made with the recursive step.
+	\end{enumerate}
 
 	\section{Number Theory}
 
@@ -39,18 +63,21 @@
 	\mathbb{C} = \text{complex numbers}\\
 	\mathbb{Q} = \text{rational numbers} = \{\dfrac{p}{q}|p, q\in\mathbb{Z},q\neq 0\}\\
 	=\{a+ib|a,b\in \mathbb{R} \text{ and is the imaginary unit.}\}\\
-	$
-	\textbf{Cardinality}:|A| = the number of elements in A\\
-	\textbf{Power set}:P (s) denotes a powerset, which is the set of all
+	$\\
+	\textbf{Cardinality}: |A| = the number of elements in A\\
+	\textbf{Power set}: P (s) denotes a powerset, which is the set of all
 	subsets of s\\
-	\textbf{First order logic}:$\forall{a}$ for all options,$\exists{a}$ there
+	\textbf{First order logic}: $\forall{a}$ for all options,$\exists{a}$ there
 	exists a case.
+	\textbf{Well Ordering Principle}: Every nonempty set of nonnegative integers has a least/smallest element.
+
 	\section{Sequences and Series}
 	\textbf{Special sequences}\\
 	Geometric progression $\{ar^0,ar^1,ar^2,\ldots,ar^n,\ldots\}$\\
 	Arithmetic progression $\{a+0d,a+1d,a+2d,\ldots,a+nd,\ldots\}$\\
 	\textbf{recurrence relation}: an equation that expresses $a_n$as a function
 	of one or more previous terms.
+
 	\section{Combinatorics}
 	\subsection{Permutations and Combinations}
 	\textbf{r-permutation}: A permutation of a set using r number of
