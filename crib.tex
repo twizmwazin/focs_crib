@@ -32,6 +32,7 @@
 		\item \textbf{Inductive Hypothesis:} Assume that $P(k)$ is true
 		\item \textbf{Inductive Step:} Prove that if $P(n)$ is true, then $P(n + 1)$ is true
 	\end{enumerate}
+	
 	\subsection{Strong Induction}
 	Prove that $P(n)$ is true for \textbf{all} $n \in \mathbb{Z}$. Induction and Strong Induction are
 	equivalent, meaning is one is true, so is the other.\\
@@ -124,6 +125,7 @@
 	\textbf{Ramsey Numbers}: $R(m, n)$ for $m$ and $n$ positive integers greater
 	than 1, the minimum number of people at a party such that there are either $m$
 	mutual friends of $n$ mutual enemies.
+	
 	\subsection{Pigeonhole Principle}
 	If $k$ is a positive integer and $k + 1$ objects are placed into $k$ boxes,
 	then at least one box contains two or more objects. $N$ pigeons placed into
@@ -131,6 +133,7 @@
 	$$\lceil\dfrac{N}{k}\rceil$$
 
 	\section{Discrete Probability}
+	
 	\subsection{Laplace's Theory or Probability}
 	Given $S$ is a finite set of equally likely outcomes, and $E$ is an event of
 	$S$:
@@ -139,6 +142,7 @@
 	$P(E)$. \\
 	Given $E_1$ and $E_2$ are events in $S$:
 	$$p(E_! \cup E_2) = p(E_1) + p(E_2) - p(E_1 \cap E_2)$$
+	
 	\subsection{Probability Distributions}
 	Let $S$ be a finite set of outcomes. We can assign a $p(s)$ to each $s$ in $S$
 	on two conditions:
@@ -151,16 +155,20 @@
 	is $\frac{1}{|S|}$. \\
 	The probability of event $E$ is the sum of the probabilities of the outcomes in
 	$E$.
+	
 	\subsection{Conditional Probability}
 	$p(E|F)$ is ``the probability of $E$, given $F$ is true.'' \\
 	Given events $E$ and $F$ where $p(E) \neq 0$ and $p(F) \neq 0$:
 	$$p(F|E) = \frac{p(E|F)p(F)}{p(E|F)p(F) + p(E|\neg F)p(\neg F)}$$
+	
 	\subsection{Bayes' Theorem}
 	Given $E$ and $F$ are events and $p(F) \neq 0$:
 	$$p(E|F) = \frac{p(F|E)p(E)}{p(E)}$$
+	
 	\subsection{Independence}
 	Events $E$ and $F$ are \textbf{independent} if and only if
 	$$p(E \cap F) = p(E)p(F)$$
+	
 	\subsection{Random Variables and Expectation}
 	A \textbf{random variable} is a function from the sample space of all real
 	numbers that assigns a real number to each possible outcome.
@@ -179,6 +187,7 @@
 	$$E(aX + b) = aE(x) + b$$
 
 	\section{Models of Computation}
+	
 	\subsection{Regular Languages}
 	\begin{itemize}
 		\item A \textbf{languages} is any subset of $\Sigma^*$
@@ -189,6 +198,7 @@
 		\item We say a Finite Automata accepts a string if, when it processes that
 					string, it ends in an accept state.
 	\end{itemize}
+	
 	\subsection{Finite Automata and Regular Expressions}
 	Example of a finite automata:
 	\begin{center}
@@ -218,7 +228,7 @@
 		\end{tikzpicture}
 	\end{center}
 	A machine only accepts \textbf{one} language. If it accept no strings, it
-	recognizes the langauge $\o$. \\
+	recognizes the langauge \o. \\
 	A palindrome is a string whose reversal is identical to the string.
 	\subsection{Contex-Free Languages and Grammars}
 	\begin{itemize}
