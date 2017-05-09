@@ -70,6 +70,78 @@
   \end{enumerate}
 
   \section{Number Theory}
+  The study of integers.
+  \subsection{Divisibility}
+  For $a, b, \in \mathbb{Z}, a \neq 0$, $a|b$ if $\exists c \in \mathbb{Z}$ such 
+  that $b = ac$\\
+  This means:\\
+  $a|b$ means $a$ \textbf{divides} $b$\\
+  $a \nmid b$ means $a$ \textbf{does not divide} $b$\\
+  $a$ is a factor and divisor of $b$ if $a|b$\\
+  $b$ is a multiple of $a$ if $a|b$
+
+  \subsubsection{Theorem 1}
+  \begin{enumerate}
+	  \item if $a|b$ and $a|c$, then $a|(b+c)$
+	  \item if $a|b$, then $a|bc$, $\forall c \in \mathbb{Z}$
+	  \item if $a|b$ and $b|c$, then $a|c$
+  \end{enumerate}
+  \textbf{Note:} floor is $\lfloor \rfloor$
+
+  \subsubsection{The Division Algorithm}
+  Given $a \in \mathbb{Z}$ and $d \in \mathbb{Z}_{>0}$, then there exists unique 
+  integers $q$ and and $r$ with $0 \leq r < d$ such that $a = dq + r$ where:
+  \begin{itemize}
+	  \item d is the divisor
+	  \item q is the quotient
+	  \item r is the remainder
+	  \item $q = a \text{ div } d$
+	  \item $r = a \text{ mod } d$
+  \end{itemize}
+  
+  \subsection{Modular Arithmetic}
+  For $a, b \in \mathbb{Z}$ and $m \in \mathbb{Z}_{>0}$:\\
+  If $m|(a-b)$, $a$ is congruent to $b$ modulo $m$\\
+  Written as: $a \equiv b(\text{mod}m)$\\
+  \textbf{Theorem 3:} $a \equiv b(\text{mod}m) \iff a \text{mod} m = b \text{mod} m$\\
+  \textbf{Theorem 4:} Given $m \in \mathbb{Z}_{>0}$, integers $a \equiv b(\text{mod}m) 
+  \iff \exists k \in \mathbb{Z} \ni a = b + km$\\
+  \textbf{Congruence Class:} The set of all integers congruent to integer $b$ mod $m$ is 
+  the congruence class of $b$ mod $m$\\
+  \textbf{Theorem 5:} Given $m \in \mathbb{Z}_{>0}$, if $a \equiv b(\text{mod}m)$ and $c 
+  \equiv d(\text{mod}m)$, then $a + c = (b + d)(\text{mod}m)$ and $ac = (bd)(\text{mod}m)$\\
+  \textbf{Corollary 2:} Given $m \in \mathbb{Z}_{>0}$ and $a, b \in \mathbb{Z}$, $(a+b)\text{mod}m 
+  = (a\text{mod}m + b\text{mod}m)\text{mod}m$ \textbf{and} $ab(\text{mod}m) = 
+  ((a\text{mod}m)(b\text{mod}m))\text{mod}m$\\
+  
+  \subsection{Properties}
+  \begin{itemize}
+	  \item $\mathbb{Z}_m = {0, 1, ..., m- 1}$ with $ m\in \mathbb{Z}_{>0}$
+	  \item $a+_mb = (a + b)\text{mod}m$
+	  \item $a*_mb = (ab)\text{mod}m$ 
+  \end{itemize}
+  \textbf{Closure:} Given $a, b \in \mathbb{Z}_m$, then:
+  \begin{itemize}
+	  \item $a+_mb \in \mathbb{Z}_m$
+	  \item $a*_mb \in \mathbb{Z}_m$
+  \end{itemize}
+  \textbf{Associativity:} Given $a, b, c, \in \mathbb{Z}_m$, then:
+  \begin{itemize}
+  	\item $(a +_mb)+_mc = a+_m(b+_mc)$
+	\item $(a *_mb)*_mc = a*_m(b*_mc)$
+  \end{itemize}
+  \textbf{Commutativity:} Given $a, b \in \mathbb{Z}_m$, then:
+  \begin{itemize}
+	  \item $a+_mb = b+_ma$
+	  \item $a*_mb = b*_ma$
+  \end{itemize}
+  \textbf{Additive Inverse:} Given $a \in \mathbb{Z}_m$ and $a \neq 0$, then $a+_m(m - a) = 0$\\
+  \textbf{Distributivity:} Given $a, b, c, \in \mathbb{Z}_m$, then $a*_m(b+_mc) = (a*_mb) +_m (a*_mc)$\\
+  \textbf{Multiplicative Inverse Does Not Exist}
+
+  \subsection{Integer Representations and Algorithms}
+  \subsection{Conversions Among Binary, Octal, and Hexidecimal}
+  \subsection{Modular Exponentiation}
 
   \section{Set Theory}
   $
