@@ -102,23 +102,23 @@
   \subsection{Modular Arithmetic}
   For $a, b \in \mathbb{Z}$ and $m \in \mathbb{Z}_{>0}$:\\
   If $m|(a-b)$, $a$ is congruent to $b$ modulo $m$\\
-  Written as: $a \equiv b(\text{mod}m)$\\
-  \textbf{Theorem 3:} $a \equiv b(\text{mod}m) \iff a \text{mod} m = b \text{mod} m$\\
-  \textbf{Theorem 4:} Given $m \in \mathbb{Z}_{>0}$, integers $a \equiv b(\text{mod}m) 
+  Written as: $a \equiv b(\mod m)$\\
+  \textbf{Theorem 3:}\\ $a \equiv b(\mod m) \iff a \mod  m = b \mod  m$\\
+  \textbf{Theorem 4:}\\ Given $m \in \mathbb{Z}_{>0}$, integers $a \equiv b(\mod m) 
   \iff \exists k \in \mathbb{Z} \ni a = b + km$\\
-  \textbf{Congruence Class:} The set of all integers congruent to integer $b$ mod $m$ is 
+  \textbf{Congruence Class:}\\ The set of all integers congruent to integer $b$ mod $m$ is 
   the congruence class of $b$ mod $m$\\
-  \textbf{Theorem 5:} Given $m \in \mathbb{Z}_{>0}$, if $a \equiv b(\text{mod}m)$ and $c 
-  \equiv d(\text{mod}m)$, then $a + c = (b + d)(\text{mod}m)$ and $ac = (bd)(\text{mod}m)$\\
-  \textbf{Corollary 2:} Given $m \in \mathbb{Z}_{>0}$ and $a, b \in \mathbb{Z}$, $(a+b)\text{mod}m 
-  = (a\text{mod}m + b\text{mod}m)\text{mod}m$ \textbf{and} $ab(\text{mod}m) = 
-  ((a\text{mod}m)(b\text{mod}m))\text{mod}m$\\
+  \textbf{Theorem 5:}\\ Given $m \in \mathbb{Z}_{>0}$, if $a \equiv b(\mod m)$ and $c 
+  \equiv d(\mod m)$, then $a + c = (b + d)(\mod m)$ and $ac = (bd)(\mod m)$\\
+  \textbf{Corollary 2:}\\ Given $m \in \mathbb{Z}_{>0}$ and $a, b \in \mathbb{Z}$, $(a+b)\mod m 
+  = (a\mod m + b\mod m)\mod m$ \textbf{and} $ab(\mod m) = 
+  ((a\mod m)(b\mod m))\mod m$\\
   
   \subsection{Properties}
   \begin{itemize}
 	  \item $\mathbb{Z}_m = {0, 1, ..., m- 1}$ with $ m\in \mathbb{Z}_{>0}$
-	  \item $a+_mb = (a + b)\text{mod}m$
-	  \item $a*_mb = (ab)\text{mod}m$ 
+	  \item $a+_mb = (a + b)\mod m$
+	  \item $a*_mb = (ab)\mod m$ 
   \end{itemize}
   \textbf{Closure:} Given $a, b \in \mathbb{Z}_m$, then:
   \begin{itemize}
@@ -135,11 +135,12 @@
 	  \item $a+_mb = b+_ma$
 	  \item $a*_mb = b*_ma$
   \end{itemize}
-  \textbf{Additive Inverse:} Given $a \in \mathbb{Z}_m$ and $a \neq 0$, then $a+_m(m - a) = 0$\\
-  \textbf{Distributivity:} Given $a, b, c, \in \mathbb{Z}_m$, then $a*_m(b+_mc) = (a*_mb) +_m (a*_mc)$\\
+  \textbf{Additive Inverse:}\\ Given $a \in \mathbb{Z}_m$ and $a \neq 0$, then $a+_m(m - a) = 0$\\
+  \textbf{Distributivity:}\\ Given $a, b, c, \in \mathbb{Z}_m$, then $a*_m(b+_mc) = (a*_mb) +_m (a*_mc)$\\
   \textbf{Multiplicative Inverse Does Not Exist}
 
   \subsection{Integer Representations and Algorithms}
+  Given $b \in \mathbb{Z}$, $b > 1$, if $n \in \mathbb{Z}_{>0}$: $$n = a_kb^k + a_{k-1}b^{k-1} + ... + a_1b + a_0$$
   \subsection{Conversions Among Binary, Octal, and Hexidecimal}
   \subsection{Modular Exponentiation}
 
