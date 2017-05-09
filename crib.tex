@@ -17,39 +17,55 @@
 	\textbf{Conjecture}: A unproven statement proposed to be true\\
 
 	\subsection{Methods of Proving}
-	\textbf{Direct Proofs:} Prove something of the form $p \rightarrow q$\\
-	\textbf{Proof by Contraposition:} Prove $\neg q \rightarrow \neg p$\\
-	\textbf{Trivial Proofs:} For $p \rightarrow q$ prove that $q = T$ independent of $p$\\
-	\textbf{Proof by Contradiction:} Assume that $p$, then prove that assumption wrong\\
-	\textbf{Proof of Equivalence:} Prove $p \leftrightarrow $q by proving $p \rightarrow q$ and $q \rightarrow p$\\
-	\textbf{Counterexamples:} Sometimes the easiest way to prove something is wrong is to find an example\\
+	\textbf{Direct Proofs:} Prove something of the form $p \rightarrow q$.\\
+	\textbf{Proof by Contraposition:} Prove $\neg q \rightarrow \neg p$.\\
+	\textbf{Trivial Proofs:} For $p \rightarrow q$ prove that $q = T$ independent of $p$.\\
+	\textbf{Proof by Contradiction:} Assume that $p$, then prove that assumption wrong.\\
+	\textbf{Proof of Equivalence:} Prove $p \leftrightarrow $q by proving 
+	$p \rightarrow q$ and $q \rightarrow p$.\\
+	\textbf{Counterexamples:} Sometimes the easiest way to prove something is 
+	wrong is to find an example.\\
+	\textbf{Proof by Exhaustion and Proof by Cases:} Prove every case separately.\\
+	\textbf{Without Loss of Generality (wlog):} Avoid arguing every case 
+	because some of them use identical arguments. Invoke this at the top 
+	of a proof to argue why you don't need to prove every case.
+	
 
 	\section{Proofs by Induction}
 	Proves the truth of $P(n)$ for all $n \in \mathbb{Z}$.\\
 	Major Steps:
 	\begin{enumerate}
-		\item \textbf{Basis Step:} Prove $P(b)$ is true, where b is the base value (usually the smallest one possible)
+		\item \textbf{Basis Step:} Prove $P(b)$ is true, where b is the base 
+		value (usually the smallest one possible)
 		\item \textbf{Inductive Hypothesis:} Assume that $P(k)$ is true
-		\item \textbf{Inductive Step:} Prove that if $P(n)$ is true, then $P(n + 1)$ is true
+		\item \textbf{Inductive Step:} Prove that if $P(n)$ is true, then 
+		$P(n + 1)$ is true
 	\end{enumerate}
 	
 	\subsection{Strong Induction}
-	Prove that $P(n)$ is true for \textbf{all} $n \in \mathbb{Z}$. Induction and Strong Induction are
+	Prove that $P(n)$ is true for \textbf{all} $n \in \mathbb{Z}$. Induction 
+	and Strong Induction are
 	equivalent, meaning is one is true, so is the other.\\
 	Major Steps:
 	\begin{enumerate}
-		\item \textbf{Basis Step:} Prove $P(b)$ is true, where b is the base value (usually the smallest one possible)
-		\item \textbf{Inductive Hypothesis:} Assume that $P(y)$ is true for all $b \leq y \leq k$
-		\item \textbf{Inductive Step:} Prove that if $P(y)$ is true, then $P(k + 1)$ is true
+		\item \textbf{Basis Step:} Prove $P(b)$ is true, where b is the base 
+		value (usually the smallest one possible)
+		\item \textbf{Inductive Hypothesis:} Assume that $P(y)$ is true for 
+		all $b \leq y \leq k$
+		\item \textbf{Inductive Step:} Prove that if $P(y)$ is true, then 
+		$P(k + 1)$ is true
 	\end{enumerate}
 
 	\subsection{Structural Induction}
 	Used to prove results about recursively defined sets and structures.\\
 	Major Steps:
 	\begin{enumerate}
-		\item \textbf{Basis Step:} Prove $P(b)$ is true for the basis part of the recursive definition
-		\item \textbf{Inductive Hypothesis:} Assume that the recursive part of the definition is true for the basis step
-		\item \textbf{Inductive Step:} Prove if the recursive part holds for the basis step, then it holds for everything made with the recursive step.
+		\item \textbf{Basis Step:} Prove $P(b)$ is true for the basis part of the 
+		recursive definition
+		\item \textbf{Inductive Hypothesis:} Assume that the recursive part of the 
+		definition is true for the basis step
+		\item \textbf{Inductive Step:} Prove if the recursive part holds for the 
+		basis step, then it holds for everything made with the recursive step.
 	\end{enumerate}
 
 	\section{Number Theory}
@@ -70,7 +86,8 @@
 	subsets of s\\
 	\textbf{First order logic}: $\forall{a}$ for all options,$\exists{a}$ there
 	exists a case.
-	\textbf{Well Ordering Principle}: Every nonempty set of nonnegative integers has a least/smallest element.
+	\textbf{Well Ordering Principle}: Every nonempty set of nonnegative integers 
+	has a least/smallest element.
 
 	\section{Sequences and Series}
 	\textbf{Special sequences}\\
