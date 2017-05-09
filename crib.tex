@@ -1,7 +1,13 @@
 \documentclass[letter]{article}
-\usepackage{amsmath, amsthm, amssymb, multicol}
+\usepackage{amsmath, amsthm, amssymb, multicol, enumitem}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{tikz}
+
+\usepackage{titlesec}
+
+\titlespacing\section{0pt}{4pt plus 2pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{4pt plus 2pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{4pt plus 2pt minus 2pt}{0pt plus 2pt minus 2pt}
 
 \pagenumbering{gobble}
 
@@ -29,14 +35,14 @@
   \textbf{Counter-examples}: Sometimes the easiest way to prove something is
   wrong is to find an example\\
   \textbf{Proof by Exhaustion and Proof by Cases:} Prove every case separately.\\
-  \textbf{Without Loss of Generality (wlog):} Avoid arguing every case 
-  because some of them use identical arguments. Invoke this at the top 
+  \textbf{Without Loss of Generality (wlog):} Avoid arguing every case
+  because some of them use identical arguments. Invoke this at the top
   of a proof to argue why you don't need to prove every case.
 
   \section{Proofs by Induction}
   Proves the truth of $P(n)$ for all $n \in \mathbb{Z}$.\\
   Major Steps:
-  \begin{enumerate}
+  \begin{enumerate}[noitemsep]
     \item \textbf{Basis Step:} Prove $P(b)$ is true, where b is the base value
           (usually the smallest one possible)
     \item \textbf{Inductive Hypothesis:} Assume that $P(k)$ is true
@@ -48,7 +54,7 @@
   Prove that $P(n)$ is true for \textbf{all} $n \in \mathbb{Z}$. Induction and
   Strong Induction are equivalent, meaning is one is true, so is the other. \\
   Major Steps:
-  \begin{enumerate}
+  \begin{enumerate}[noitemsep]
     \item \textbf{Basis Step:} Prove $P(b)$ is true, where b is the base value
           (usually the smallest one possible)
     \item \textbf{Inductive Hypothesis:} Assume that $P(y)$ is true for all
@@ -60,7 +66,7 @@
   \subsection{Structural Induction}
   Used to prove results about recursively defined sets and structures. \\
   Major Steps:
-  \begin{enumerate}
+  \begin{enumerate}[noitemsep]
     \item \textbf{Basis Step}: Prove $P(b)$ is true for the basis part of the
           recursive definition
     \item \textbf{Inductive Hypothesis}: Assume that the recursive part of the
@@ -72,7 +78,7 @@
   \section{Number Theory}
   The study of integers.
   \subsection{Divisibility}
-  For $a, b, \in \mathbb{Z}, a \neq 0$, $a|b$ if $\exists c \in \mathbb{Z}$ such 
+  For $a, b, \in \mathbb{Z}, a \neq 0$, $a|b$ if $\exists c \in \mathbb{Z}$ such
   that $b = ac$\\
   This means:\\
   $a|b$ means $a$ \textbf{divides} $b$\\
@@ -81,7 +87,7 @@
   $b$ is a multiple of $a$ if $a|b$
 
   \subsubsection{Theorem 1}
-  \begin{enumerate}
+  \begin{enumerate}[noitemsep]
 	  \item if $a|b$ and $a|c$, then $a|(b+c)$
 	  \item if $a|b$, then $a|bc$, $\forall c \in \mathbb{Z}$
 	  \item if $a|b$ and $b|c$, then $a|c$
@@ -89,58 +95,65 @@
   \textbf{Note:} floor is $\lfloor \rfloor$
 
   \subsubsection{The Division Algorithm}
-  Given $a \in \mathbb{Z}$ and $d \in \mathbb{Z}_{>0}$, then there exists unique 
+  Given $a \in \mathbb{Z}$ and $d \in \mathbb{Z}_{>0}$, then there exists unique
   integers $q$ and and $r$ with $0 \leq r < d$ such that $a = dq + r$ where:
-  \begin{itemize}
+  \begin{itemize}[noitemsep]
 	  \item d is the divisor
 	  \item q is the quotient
 	  \item r is the remainder
 	  \item $q = a \text{ div } d$
 	  \item $r = a \text{ mod } d$
   \end{itemize}
-  
+
   \subsection{Modular Arithmetic}
-  For $a, b \in \mathbb{Z}$ and $m \in \mathbb{Z}_{>0}$:\\
-  If $m|(a-b)$, $a$ is congruent to $b$ modulo $m$\\
-  Written as: $a \equiv b(\mod m)$\\
-  \textbf{Theorem 3:}\\ $a \equiv b(\mod m) \iff a \mod  m = b \mod  m$\\
-  \textbf{Theorem 4:}\\ Given $m \in \mathbb{Z}_{>0}$, integers $a \equiv b(\mod m) 
-  \iff \exists k \in \mathbb{Z} \ni a = b + km$\\
-  \textbf{Congruence Class:}\\ The set of all integers congruent to integer $b$ mod $m$ is 
-  the congruence class of $b$ mod $m$\\
-  \textbf{Theorem 5:}\\ Given $m \in \mathbb{Z}_{>0}$, if $a \equiv b(\mod m)$ and $c 
-  \equiv d(\mod m)$, then $a + c = (b + d)(\mod m)$ and $ac = (bd)(\mod m)$\\
-  \textbf{Corollary 2:}\\ Given $m \in \mathbb{Z}_{>0}$ and $a, b \in \mathbb{Z}$, $(a+b)\mod m 
-  = (a\mod m + b\mod m)\mod m$ \textbf{and} $ab(\mod m) = 
-  ((a\mod m)(b\mod m))\mod m$\\
-  
+  \noindent
+  For $a, b \in \mathbb{Z}$ and $m \in \mathbb{Z}_{>0}$: \\
+  If $m|(a-b)$, $a$ is congruent to $b$ modulo $m$ \\
+  Written as: $a \equiv b(\mod m)$ \\
+  \textbf{Theorem 3}:
+  $$a \equiv b(\mod m) \iff a \mod  m = b \mod m$$
+  \textbf{Theorem 4}: Given $m \in \mathbb{Z}_{>0}$, integers
+  $$a \equiv b(\mod m) \iff \exists k \in \mathbb{Z} \ni a = b + km$$
+  \textbf{Congruence Class}: The set of all integers congruent to integer
+  $b \mod m$ is the congruence class of $b \mod m$ \\
+  \textbf{Theorem 5}: Given $m \in \mathbb{Z}_{>0}$, if $a \equiv b(\mod m)$
+  and $c \equiv d(\mod m)$, then
+  $$a + c = (b + d)(\mod m)$$
+  $$ac = (bd)(\mod m)$$
+  \textbf{Corollary 2}: Given $m \in \mathbb{Z}_{>0}$ and $a, b \in \mathbb{Z}$,
+  $$(a+b)\mod m = (a\mod m + b\mod m)\mod m$$
+  $$ab(\mod m) = ((a\mod m)(b\mod m))\mod m$$
+
   \subsection{Properties}
   \begin{itemize}
 	  \item $\mathbb{Z}_m = {0, 1, ..., m- 1}$ with $ m\in \mathbb{Z}_{>0}$
 	  \item $a+_mb = (a + b)\mod m$
-	  \item $a*_mb = (ab)\mod m$ 
+	  \item $a*_mb = (ab)\mod m$
   \end{itemize}
   \textbf{Closure:} Given $a, b \in \mathbb{Z}_m$, then:
-  \begin{itemize}
+  \begin{itemize}[noitemsep]
 	  \item $a+_mb \in \mathbb{Z}_m$
 	  \item $a*_mb \in \mathbb{Z}_m$
   \end{itemize}
   \textbf{Associativity:} Given $a, b, c, \in \mathbb{Z}_m$, then:
-  \begin{itemize}
+  \begin{itemize}[noitemsep]
   	\item $(a +_mb)+_mc = a+_m(b+_mc)$
 	\item $(a *_mb)*_mc = a*_m(b*_mc)$
   \end{itemize}
   \textbf{Commutativity:} Given $a, b \in \mathbb{Z}_m$, then:
-  \begin{itemize}
+  \begin{itemize}[noitemsep]
 	  \item $a+_mb = b+_ma$
 	  \item $a*_mb = b*_ma$
   \end{itemize}
-  \textbf{Additive Inverse:}\\ Given $a \in \mathbb{Z}_m$ and $a \neq 0$, then $a+_m(m - a) = 0$\\
-  \textbf{Distributivity:}\\ Given $a, b, c, \in \mathbb{Z}_m$, then $a*_m(b+_mc) = (a*_mb) +_m (a*_mc)$\\
+  \textbf{Additive Inverse:}\\ Given $a \in \mathbb{Z}_m$ and $a \neq 0$, then
+  $a+_m(m - a) = 0$ \\
+  \textbf{Distributivity:}\\ Given $a, b, c, \in \mathbb{Z}_m$, then
+  $a*_m(b+_mc) = (a*_mb) +_m (a*_mc)$ \\
   \textbf{Multiplicative Inverse Does Not Exist}
 
   \subsection{Integer Representations and Algorithms}
-  Given $b \in \mathbb{Z}$, $b > 1$, if $n \in \mathbb{Z}_{>0}$: $$n = a_kb^k + a_{k-1}b^{k-1} + ... + a_1b + a_0$$
+  Given $b \in \mathbb{Z}$, $b > 1$, if $n \in \mathbb{Z}_{>0}$: $$n = a_kb^k +
+  a_{k-1}b^{k-1} + \ldots + a_1b + a_0$$
   \subsection{Conversions Among Binary, Octal, and Hexidecimal}
   \subsection{Modular Exponentiation}
 
@@ -238,10 +251,10 @@
   \subsection{Probability Distributions}
   Let $S$ be a finite set of outcomes. We can assign a $p(s)$ to each $s$ in $S$
   on two conditions:
-  \begin{itemize}
+  \begin{itemize}[noitemsep]
     \item $0 \leq p(s) \leq 1$ for each $s$
     \item $\sum{p(s)} = 1$
-  \end{itemize}
+  \end{itemize}[noitemsep]
   $p$ is a function called the ``\textbf{probability distribution}.'' \\
   If each element in $S$ is equally likely, then the probability of each element
   is $\frac{1}{|S|}$. \\
@@ -281,7 +294,7 @@
   \section{Models of Computation}
 
   \subsection{Regular Languages}
-  \begin{itemize}
+  \begin{itemize}[noitemsep]
     \item A \textbf{languages} is any subset of $\Sigma^*$
     \item Example: $\Sigma = {a, b}$ \\
           ${\lambda}$ \\
@@ -324,7 +337,7 @@
   A palindrome is a string whose reversal is identical to the string.
 
   \subsection{Contex-Free Languages and Grammars}
-  \begin{itemize}
+  \begin{itemize}[noitemsep]
     \item A \textbf{regular expression} is a way of describing a regular
           language.
     \item A grammar gives the rules for expressing a language.
@@ -346,7 +359,7 @@
 
   \subsection{Turning Machines}
   A turing machine:
-  \begin{itemize}
+  \begin{itemize}[noitemsep]
     \item Reads input from tape, one character at a time.
     \item Changes state based on input.
     \item Outputs ``accept'' or ``reject'' when input ends.
@@ -359,7 +372,7 @@
   infinate loop means ``reject.'' \\
 
   \section{Limitations of Computational Models}
-  \begin{itemize}
+  \begin{itemize}[noitemsep]
     \item The language consisting of all Turing Machines encodings is an
           infinate set.
     \item Not all languages are recognizeable by a Turing Machine.
@@ -367,7 +380,7 @@
   \end{itemize}
 
   \subsection{Countable vs. Uncountable Sets}
-  \begin{itemize}
+  \begin{itemize}[noitemsep]
     \item An infinite set $S$ is \textbf{countable} if and only if ther exists a
           bijective function $f: S \rightarrow Z^+$. $f$ maps each element of
           $S$ to exactly one element of $Z^+$ and every element of $Z^+$ is
@@ -378,7 +391,7 @@
   \end{itemize}
 
   \subsection{Enumerators}
-  \begin{itemize}
+  \begin{itemize}[noitemsep]
     \item An enumerator for a langage $S$ is a Turing Machine that generates
           all the strings in $S$ one by one. Each string is generated in finite
           time.
@@ -388,7 +401,7 @@
   \end{itemize}
 
   \subsection{Languages}
-  \begin{itemize}
+  \begin{itemize}[noitemsep]
     \item There are some languages not accepted by Turing Machines.
     \item These languages cannout be described by algorithms.
     \item A languages is called \textbf{Turing recognizable} if some Turing
@@ -399,7 +412,7 @@
   \end{itemize}
 
   \section{Decision Problems}
-  \begin{itemize}
+  \begin{itemize}[noitemsep]
     \item \textbf{Decision problems} are problems with a YES or NO answer.
     \item A language is \textbf{Turing-decidable} if some Turing Machine decides
           it.
@@ -413,7 +426,7 @@
 
   \section{P and NP}
   $$P \subseteq NP$$
-  \begin{itemize}
+  \begin{itemize}[noitemsep]
     \item Every language that can be decided by a deterministic Turing
           Machine in polynomial time can be decided by a nondeterministic
           Turing Machine in polynomial time.
